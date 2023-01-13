@@ -139,7 +139,7 @@ for material, m in pairs(materials) do
 		local name = ":3d_armor:"..part.."_"..material
 		armor:register_armor(name, {
 			description = S("@1 @2", m.name, p.name),
-			inventory_image = "technic_armor_inv_"..part.."_"..material..".png",
+			inventory_image = "3d_armor_inv_"..part.."_"..material..".png",
 			groups = {
 				["armor_"..p.place] = math.floor(p.level * m.armor),
 				armor_heal = m.heal,
