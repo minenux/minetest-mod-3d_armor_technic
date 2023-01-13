@@ -4,7 +4,7 @@ local S = armor_i18n.gettext
 local F = armor_i18n.fgettext
 
 if not minetest.get_modpath("technic_worldgen") then
-	minetest.log("warning", S("[technic_armor]: Mod loaded but unused."))
+	minetest.log("warning", S("[3d_armor_technic]: Mod loaded but unused."))
 	return
 end
 
@@ -136,7 +136,7 @@ end
 
 for material, m in pairs(materials) do
 	for part, p in pairs(parts) do
-		local name = "technic_armor:"..part.."_"..material
+		local name = ":3d_armor:"..part.."_"..material
 		armor:register_armor(name, {
 			description = S("@1 @2", m.name, p.name),
 			inventory_image = "technic_armor_inv_"..part.."_"..material..".png",

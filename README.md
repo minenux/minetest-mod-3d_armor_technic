@@ -1,4 +1,4 @@
-minetest mod technic_armor
+minetest mod 3d_armor_technic
 ============================
 
 ARMOR from procesed materials
@@ -13,8 +13,8 @@ Adds armor made from lead, brass, cast iron, carbon steel, stainless steel, tin 
 Technical information
 ---------------------
 
-This mod is named `technic_armor` and was part of the `3d_armor`, 
-it was slited since version 0.4.11 of `3d_armor`
+This mod is named `3d_armor_technic` and is(was) part of the `3d_armor`, 
+it was slited since version 0.4.11 of `3d_armor` now in minenux flavor merged again
 
 #### Depends
 
