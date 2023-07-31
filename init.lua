@@ -1,7 +1,6 @@
 
 -- Use 3d_armor translator to take advantage of existing translations for armor parts
 local S = armor_i18n.gettext
-local F = armor_i18n.fgettext
 
 if not minetest.get_modpath("technic_worldgen") then
 	minetest.log("warning", S("[3d_armor_technic]: Mod loaded but unused."))
