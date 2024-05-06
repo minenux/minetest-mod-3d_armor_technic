@@ -1,10 +1,9 @@
 
 -- Use 3d_armor translator to take advantage of existing translations for armor parts
 local S = armor_i18n.gettext
-local F = armor_i18n.fgettext
 
 if not minetest.get_modpath("technic_worldgen") then
-	minetest.log("warning", S("[3d_armor_technic]: Mod loaded but unused."))
+	minetest.log("warning", "[3d_armor_technic]: Mod loaded but unused.")
 	return
 end
 
@@ -38,7 +37,7 @@ if minetest.get_modpath("technic_worldgen") then
 	materials.carbon = {
 		name = S("Carbon Steel"),
 		craft_item = "technic:carbon_steel_ingot",
-		armor = 2.7,
+-		armor = 2.7,
 		heal = 10,
 		use = 100,
 		radiation = 40
@@ -55,11 +54,7 @@ end
 
 local tin_ingot
 
-if minetest.registered_items["default:tin_ingot"] then
-	tin_ingot = "default:tin_ingot"
-end
-
-if minetest.get_modpath("moreores") then
+if minetest.get_modpath("moreores") and minetest.registered_items["moreores:tin_ingot"] then
 	tin_ingot = "moreores:tin_ingot"
 	materials.silver = {
 		name = S("Silver"),
@@ -70,8 +65,8 @@ if minetest.get_modpath("moreores") then
 		radiation = 53
 	}
 end
-
-if tin_ingot then
+if minetest.get_modpath("default") and minetest.registered_items["default:tin_ingot"] then
+	tin_ingot = "default:tin_ingot"
 	materials.tin = {
 		name = S("Tin"),
 		craft_item = tin_ingot,
@@ -153,3 +148,6 @@ for material, m in pairs(materials) do
 		})
 	end
 end
+
+minetest.log("[3d_armor_technic]: Mod loaded successfully.")
+
